@@ -8,6 +8,12 @@ canvas#v3map {
     z-index: 1;
 }
 
+div#canvaspanel {
+    overflow:auto;
+    height:600;
+    width:700;
+}
+
 div#sizetest {
     width:100%;
 }
