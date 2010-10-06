@@ -1,0 +1,46 @@
+h1. Zotonic
+
+h2. Official Repository
+
+The official repository of Zotonic can be found at its 
+"Google Code project site":http://code.google.com/p/zotonic/
+
+You can use Mercurial to clone the official repository using:
+> hg clone https://zotonic.googlecode.com/hg/ zotonic
+
+h2. GitHub mirror and fork
+
+The official Git mirror for the Zotonic project is located at:
+http://github.com/arjan/zotonic
+
+The frequency of the mirroring of the Mercurial updates on this 
+official Git mirror has been once or twice around the time of a 
+major release of the Zotonic project (not regularly) so far.
+
+There are several forks on GitHub of this Git mirror.
+
+This fork is located at "mbbx6spp/zotonic":http://github.com/mbbx6spp/zotonic
+
+The master and release branches and tags will only contain commits 
+from either the upstream official Git repo or the official Mercurial repo 
+of Zotonic.  Other branches or tags may contain code contributed by 
++mbbx6spp+ (aka "@SusanPotter":http://twitter.com/SusanPotter).
+
+h2. Using Git with submodules
+
+The reason I am maintaining a Git mirror and fork of Zotonic instead of using
+Mercurial directly is because I have private Git submodules under priv/sites 
+of the distribution for my own Zotonic site configuration and have no time to 
+manage non Git repos for my own code.
+
+First of all you will want to set .hgignore as the excludes file for your Git 
+repository clone:
+> git config core.excludesfile .hgignore
+
+Instead of creating a duplicate file called .gitignore.
+
+Then if you want to save your site configuration in your own private Git repos 
+you can create a new Git repository under priv/sites/[yoursitename] and add it 
+as a submodule on the top level.  You might want to add .gitmodules to 
+.hgignore if I haven't already added it.  In addition add the site directories 
+to .hgignore as well.
